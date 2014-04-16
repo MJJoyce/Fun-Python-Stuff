@@ -6,8 +6,8 @@
 
 		<title>reveal.js - The HTML Presentation Framework</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Fun Python Stuff">
+		<meta name="author" content="Michael Joyce">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -43,318 +43,544 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+                    <h1>Python</h1>
+                    <h3>The Fun Stuff</h3>
+                    <br />
+                    <p>
+                        <small>Michael Joyce</small><br />
+                        <small>mjjoyce.github.io/Fun-Python-Stuff</small><br />
+                    </p>
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+                    <h1>Fun Stuff!</h1>
+                    <ul>
+                        <li>Scoping</li>
+                        <li>Iterators</li>
+                        <li>Comprehensions</li>
+                        <li>Generators</li>
+                        <li>Coroutines</li>
+                        <li>Other stuff!</li>
+                    </ul>
 				</section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+                <section>
+                    <section>
+                        <h1>Python in 60 Seconds</h1>
+                    </section>
+                    <section>
+                        <h1>Variables</h1>
+                        <h4>Everything is an object!</h4>
+                        <h4><a href='https://en.wikipedia.org/wiki/Duck_typing'>Duck Typing!</a></h4>
+                        <pre><code class='python' data-trim>
+a_var = 1                    # Integers!
+x = 2.347                    # Floats!
+x = "Hi!"                    # Strings!
+y = [1, 2, 3]                # Lists!
+something = {'a': 1, 'b', 2} # Dictionaries!
+                        </code></pre>
+                    </section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
+                    <section>
+                        <h1>Control Flow</h1>
+                        <h4>Indentation matters!</h4>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+                        <pre><code class='python' data-trim>
+x = 5
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
+if x <= 10:
+    # This is where we end up!
+    print "Less than 10!"
+elif 10 < x <= 20:
+    # Notice the compound comparisons in the elif?
+    print "11 to 20!"
+else:
+    # Else catches everything
+    print "Don't care"
+                        </code></pre>
+                    </section>
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+                    <section>
+                        <h1>Loops</h1>
+                        <h4>for-loops for iteration over ranges or objects</h4>
+                        <h4>while-loops for looping with a boolean test</h4>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+                        <pre><code class='python' data-trim>
+# prints 1 2 3 4
+for i in range(5):
+    print i
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+# print all the elements in a list
+for val in ['Hi', 'Hello!', 'You smell']:
+    print val
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+answer = 'No!'
+# You better do what it says, else you'll be here for a while ...
+while answer != 'Yes':
+    answer = raw_input('Enter Yes. Seriously, do it.')
+                        </code></pre>
+                    </section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+                    <section>
+                        <h1>Functions</h1>
+                        <pre><code class='python' data-trim>
+def my_func(some_var):
+    print "Welcome to my function!"
+    print "You passed: ", some_var
 
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+# Let's call our function
+my_func(5)
+# Welcome to my function!
+# You passed: 5
+                        </code></pre>
+                    </section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
+                    <section>
+                        <h1>Classes</h1>
+                        <h4>Making our own objects!</h4>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
+                        <pre><code class='python' data-trim>
+class MyClass(object):
+    param = 4
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
+    def __init__(self, foo):
+        print 'Initializing!'
+        self.bar = foo
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+    def pretty_print(self):
+        print 'Param is: ', self.param
+        print 'Bar is: ', self.bar
 
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
+x = MyClass('baz')
+# Initializing!
 
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
+x.pretty_print()
+# Param is: 4
+# Bar is: baz
+                        </code></pre>
+                    </section>
+                </section>
 
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
+                <section>
+                    <h1>Now interesting stuff</h1>
+                </section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+                <section>
+                    <section>
+                        <h1>Scope Rules</h1>
+                        <h5>Yes, this is interesting.</h5>
+                        <h5>Stop rolling your eyes ...</h5>
+                    </section>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+                    <section>
+                        <h1>LEGB</h1>
+                        <h4>It just rolls off the tongue!</h4>
 
-    var nodes = document.querySelectorAll( selector );
+                        <br />
+                        <ul>
+                            <li>
+                                <strong>Local: </strong> Any local 'def' assignments?
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                <strong>Enclosing: </strong> Any enclosing 'def' variables?
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                <strong>Global: </strong> Anything declared globally in the module?
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                <strong>Built in: </strong> Is this built into Python?
+                            </li>
+                        </ul>
+                    </section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+                    <section>
+                        <h2>Why do I care?</h2>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+                        <pre><code class='python' data-trim>
+>>> def foo(x):
+...    if x < 10:
+...        message = "Less than 10"
+...    else:
+...        message = "Not less than 10"
+...    # This print works even though the message variable(s) 
+...    # are defined in the if-else block!
+...    print message
+...
+>>> foo(4)
+# Less than 10
+                        </code></pre>
+                    </section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+                    <section>
+                        <h2>Why do I care?</h2>
+                        <h4>Because closures!</h4>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+                        <pre><code class='python' data-trim>
+>>> def a_closure_thing(x):
+...     def returned_func():
+...         print x
+...     return returned_func
+...
+>>> y = 5
+>>> my_func = a_closure_thing(y)
+>>> y = 'This is no longer 5'
+>>> my_func()
+# 5
+                        </code></pre>
+                    </section>
+                </section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
+                <section>
+                    <section>
+                        <h1>Iterators</h1>
+                    </section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+                    <section>
+                        <p>
+                        An <strong>iterable</strong> is anything we can iterate over.
+                        <p/>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+                        <pre><code class='python' data-trim>
+# Python is using iterators in this for-loop
+>>> for i in [1, 2, 3]:
+...     print i
+1
+2
+3
+>>> for i in 'hi':
+...     print i
+h
+i
+                        </code></pre>
+                    </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+                    <section>
+                        <p>
+                            An <strong>interable</strong> is defined by implementing the <strong>__iter__</strong> method.
+                        </p>
+                        <p>
+                            The <strong>__iter__</strong> method must return an <strong>iterator</strong> object.
+                        </p>
+                    </section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+                    <section>
+                        <p>
+                            Python takes care of some ugly stuff for us.
+                        </p>
+                        <pre><code class='python' data-trim>
+>>> x = 'hi!'
+>>> type(x)
+&lt;type 'str'&gt;
+>>> type(x.__iter__())
+&lt;type 'iterator'&gt;
+>>> type(iter(x))
+&lt;type 'iterator'&gt;
+# We can pass the iterator object directly. Luckily we don't have to.
+>>> for i in iter(x):
+...     print i
+h
+i
+!
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+                        </code></pre>
+                    </section>
 
+                    <section>
+                        <p>
+                            An <strong>iterator</strong> is a stateful object that tracks which value to return next and which provides an interface for doing so.
+                        </p>
+                        <pre><code class='python' data-trim>
+>>> it = iter('hi!')
+>>> i.next()
+h
+>>> i.next()
+i
+>>> i.next()
+!
+>>> i.next()
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+StopIteration
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h1>Why do I care?</h1>
+                        <h4>Because we can make our objects iterable!</h4>
+                    </section>
+
+                    <section>
+                        <h2>Our custom Counter class</h2>
+                        <pre><code class='python' data-trim>
+>>> class Counter(object):
+...     def __init__(self, start, end):
+...         self.current, self.end = start, end
+...
+...     def __iter__(self):
+...         return self
+... 
+...     def next(self):
+...          if self.current > self.end:
+...              raise StopIteration
+...         else:
+...             self.current += 1
+...             return self.current - 1
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>It looks just like a built in object!</h2>
+                        <pre><code class='python' data-trim>
+>>> for val in Counter(3, 7):
+...     print val
+3
+4
+5
+6
+7
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h1>Decorators</h1></section>
+                    <section>
+                        <h4>Python has first class functions</h4>
+                        <p>
+                            You can treat them just like any other value
+                        </p>
+                    </section>
+                    <section>
+                        <h2>A Simple Example</h2>
+                        <pre><code class='python' data-trim>
+>>> def square(x):
+...    return x * x
+...
+>>> def simple_map(func, iterable):
+...    return [func(x) for x in iterable]
+...
+>>> y = range(10)                     
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> print simple_map(square, y)
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>A Bit More Interesting</h2>
+                        <pre><code class='python' data-trim>
+>>> import time
+>>> def timer(func):
+...     def wrapper(*args):
+...         t = time.time()
+...         res = func(*args)
+...         print func.func_name, time.time() - t
+...         return res
+...     return wrapper
+...
+>>> def summate(count):
+...	    sum(range(count))
+...
+>>> summate_with_timer = timer(summate)
+>>> summate_with_timer(9999999)
+summate 0.362576007843
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Just Use A Decorator Instead</h2>
+                        <pre><code class='python' data-trim>
+>>> import time
+>>> def timer(func):
+...     def wrapper(*fa):
+...         t = time.time()
+...         res = func(*fa)
+...         print func.func_name, time.time() - t
+...         return res
+...     return wrapper
+...
+>>> @timer
+... def summate(count):
+...     sum(range(count))
+...
+>>> summate(9999999)
+summate 0.362576007843
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>But there's more</h2>
+                        <p>Anything that is <strong>callable</strong> can be used as a decorator</p>
+
+                        <pre><code class='python' data-trim>
+>>> class MyDecorator():
+...     def __init__(self, f):
+...         self.f = f
+...
+...     def __call__(self, *fa):
+...         print "Before func"
+...         res = self.f(*fa)
+...         print "After func"
+...         return res
+...
+>>> @MyDecorator
+... def double(x):
+...     print "Doubling {}!".format(x)
+...    return x * 2
+...
+>>> print double(2.3)
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h1>Comprehensions</h1></section>
+                    <section>
+                        <p><strong>Comprehensions</strong> allow you to write for-loops in a compact way.</p>
+                    </section>
+
+                    <section>
+                        <h2>A simple example</h2>
+                        <pre><code class='python' data-trim>
+# The normal way
+>>> ret = []
+>>> for x in range(10):
+...     if x % 2 == 0:
+...         ret.append(x)
+...
+>>> print ret
+[0, 2, 4, 6, 8]
+# The way cooler way
+>>> [x for x in range(10) if x % 2 == 0]
+[0, 2, 4, 6, 8]
+
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Dicts work too</h2>
+
+                        <h4>Don't forget, order isn't guaranteed!</h4>
+
+                        <pre><code class='python' data-trim>
+# Notice the '{}' instead of '[]' and
+# the additional :-separated return value.
+>>> {str(x):x for x in range(10) if x % 2 == 0}
+{'0': 0, '8': 8, '2': 2, '4': 4, '6': 6}
+
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h1>Generators</h1></section>
+                    <section>
+                        <p>A <strong>generator</strong> is a function that acts like an <strong>iterator</strong>.
+                    </section>
+
+                    <section>
+                        <h2>A Contrived Example</h2>
+
+                        <pre><code class='python' data-trim>
+# Pretend like range() doesn't exist ...
+>>> def first_n_ints(n):
+...     num = 0
+...     nums = []
+...
+...     while num < n:
+...        nums.append(num)
+...        num += 1
+...
+...     return nums
+...
+>>> sum_first_n = sum(first_n_ints(999999999))
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>A Better Way</h2>
+
+                        <pre><code class='python' data-trim>
+# Pretend like xrange() doesn't exist ...
+>>> def first_n_ints(n):
+...     num = 0
+...
+...     while num < n:
+...        yield num
+...        num += 1
+...
+>>> sum_first_n = sum(first_n_ints(999999999))
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Simplified notation</h2>
+
+                        <p>Similar to comprehensions, there is shorthand for generator creation.</p>
+
+                        <br />
+
+                        <pre><code class='python' data-trim>
+>>> first_n_even = [x for x in range(99999999999) if x % 2 == 0]
+>>> type(first_n_even)
+&lt;type 'list'&gt;
+>>> first_n_even_generator = (x for x in range(99999999999) if x % 2 == 0)
+>>> type(first_n_even_generator)
+&lt;type 'generator'&gt;
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Why do I care?</h2>
+
+                        <p>Smaller memory footprint.</p>
+                        <p>Lazy evaluations!</p>
+                        <p>No waiting for value generation.</p>
+                        <p>Infinite sequences?!?</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h1>Coroutines</h1></section>
+
+                    <section>
+                        <p><strong>Coroutines</strong> are <strong>generators</strong> that consume values.
+                    </section>
+
+                    <section>
+                        <h2>A simple example</h2>
+
+
+                        <pre><code class='python' data-trim>
+>>> def grep(pattern):
+...     while True:
+...         line = (yield)
+...         if pattern in line:
+...             print line
+...
+>>> g = grep('python')
+# We have to prime this to get to the yield statement.
+>>> g.next()
+# No we can pass values into it forever!
+>>> p.send('This wont print anything')
+>>> p.send('This will though because python')
+This will though because python
+>>> p.send('More things that wont print anything')
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Why do I care?</h2>
+
+                        <p>You should check out this <a href='http://www.dabeaz.com/coroutines/index.html'>awesome tutorial</a>. It does a significantly better job explaining it than I could do. =)</p>
+                    </section>
+                </section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
